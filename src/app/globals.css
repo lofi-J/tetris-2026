@@ -3,6 +3,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-changa-one: var(--font-changa-one-local);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -20,4 +21,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter);
+}
+
+.tetris-logo {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.01em rgba(255, 255, 255, 0.52);
+  background:
+    linear-gradient(90deg, #8c0200 0%, #c71912 24%, #d89119 43%, #41553c 63%, #0041b1 100%),
+    linear-gradient(180deg, rgba(255, 245, 152, 0.55) 0%, rgba(255, 255, 255, 0.06) 42%, rgba(0, 0, 0, 0.42) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:
+    0 0 10px rgba(255, 8, 0, 0.55),
+    0 0 18px rgba(18, 76, 174, 0.45);
+  filter: drop-shadow(0 0 2px rgba(255, 235, 125, 0.65)) drop-shadow(0 0 14px rgba(199, 29, 23, 0.45))
+    drop-shadow(0 0 20px rgba(0, 94, 255, 0.4));
 }

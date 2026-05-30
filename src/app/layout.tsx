@@ -1,10 +1,27 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
+});
+
+const changaOne = localFont({
+  variable: '--font-changa-one-local',
+  src: [
+    {
+      path: '../../public/fonts/Changa_One/ChangaOne-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Changa_One/ChangaOne-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${changaOne.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

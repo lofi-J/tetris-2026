@@ -3,7 +3,7 @@ type GameAction = 'move-left' | 'move-right' | 'soft-drop' | 'rotate-right' | 's
 
 type GameKeyMap = Record<GameKeyCode, GameAction>;
 
-export const GamekeyMap = {
+export const GamekeyMapConfig = {
   ArrowLeft: 'move-left',
   ArrowRight: 'move-right',
   ArrowDown: 'soft-drop',

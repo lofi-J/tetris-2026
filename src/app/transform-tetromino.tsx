@@ -109,7 +109,7 @@ export default function TransformTetromino() {
           width: GRID_SIZE * CELL_SIZE + CELL_SIZE * 1.4,
           height: GRID_SIZE * CELL_SIZE + CELL_SIZE * 1.4,
           background:
-            'radial-gradient(ellipse at center, rgba(147, 197, 253, 0.24) 0%, rgba(56, 189, 248, 0.14) 34%, rgba(14, 116, 144, 0.06) 58%, transparent 78%)',
+            'radial-gradient(ellipse at center, rgba(248, 113, 113, 0.24) 0%, rgba(239, 68, 68, 0.14) 34%, rgba(127, 29, 29, 0.06) 58%, transparent 78%)',
         }}
       />
       <span
@@ -120,23 +120,23 @@ export default function TransformTetromino() {
           width: CELL_SIZE * 3.8,
           height: CELL_SIZE * 1.3,
           background:
-            'radial-gradient(ellipse at center, rgba(186, 230, 253, 0.28) 0%, rgba(56, 189, 248, 0.14) 42%, transparent 76%)',
+            'radial-gradient(ellipse at center, rgba(254, 202, 202, 0.28) 0%, rgba(239, 68, 68, 0.14) 42%, transparent 76%)',
         }}
       />
       {blockPositions.map((position, index) => (
         <motion.span
           key={index}
-          className="absolute size-6 rounded-[6px] border border-sky-200/45 bg-slate-950/90"
+          className="absolute size-6 border border-red-200/45 bg-slate-950/90 rounded-[1px]"
           style={{
             boxShadow:
-              '0 0 14px rgba(125, 211, 252, 0.34), 0 0 28px rgba(14, 116, 144, 0.18), inset 0 0 0 1px rgba(125, 211, 252, 0.16)',
+              '0 0 14px rgba(248, 113, 113, 0.34), 0 0 28px rgba(127, 29, 29, 0.18), inset 0 0 0 1px rgba(248, 113, 113, 0.16)',
           }}
           animate={{
             x: GRADIENT_PADDING + position.col * CELL_SIZE,
             y: GRADIENT_PADDING + position.row * CELL_SIZE,
           }}
           transition={{
-            duration: 0.3,
+            duration: 0.28,
             ease: 'easeInOut',
           }}
         />

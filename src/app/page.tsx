@@ -1,7 +1,7 @@
 'use client';
 
-import TransformTetromino from '@/src/app/transform-tetromino';
-import Boids from '@/src/components/canvas/boids';
+import { TransformTetromino } from '@/src/app/transform-tetromino';
+import { TETRIS } from '@/src/constants/ascii';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -24,13 +24,15 @@ export default function Home() {
   return (
     <div className="flex min-h-screen overflow-hidden relative">
       <section className="relative z-10 flex flex-1 flex-col items-center justify-center">
-        <h1 className="tetris-logo text-[clamp(5rem,12vw,12rem)] font-bold font-changa-one">TETRIS</h1>
-        <p className="text-center text-sm text-gray-500">Press Space or Enter to start</p>
-        <Link href="/game" className="mt-30 hover:scale-130 transition-all duration-300 animate-pulss">
+        <pre
+          className="font-mono text-[12px] lg:text-[15px] leading-[125%] text-foreground select-none"
+          dangerouslySetInnerHTML={{ __html: TETRIS.trim() }}
+        />
+        <p className="text-center text-sm py-6 lg:py-8">Press Space or Enter to start</p>
+        <Link href="/game" className="hover:scale-130 transition-all duration-300 animate-pulss">
           <TransformTetromino />
         </Link>
       </section>
-      <Boids />
     </div>
   );
 }
